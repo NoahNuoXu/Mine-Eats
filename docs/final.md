@@ -74,7 +74,7 @@ Since there were only four cases that we could think of in which the agent neede
 
         return reward
 
-### Approach 4: Editing the arena size ###
+### Approach 4: Editing the arena size and changing the observation###
 
 Next, we tried changing around the arena size to give the agent more opportunity to learn. This worked really well. We ended up dropping the arena size down to 8x8, and this made the agent run into the zombies more.
 
@@ -99,12 +99,17 @@ To add the zombie's location to our observation state we used the following code
 
                                  #had to flip i and j to match row and column to the x,z coords in malmo
                                  obs[int(y)+1][int(j)][int(i)] = 2
+                                 
+ We also used the Malmo platform to gain information of the surrounding information of the agent to incorporate the wall's location. This helped as it gave the agent referrence as to where it is so it knew more when it was calculating the next Q value.
 
 
 ### Approach 5: Making the initial attack smarter ###
 
 Next, we tried to add a small radar system that allows the agent to detect zombies within a certain radius and attack if they are in that radius. The problem here was that the zombies would have a propensity to attack from behind. This caused the agent to get stuck attack at nothing but air, and he would learn that attacking is actually NOT what he wants to do, as the zombies would eventually push the agent against a wall, and as he attacks a wall, the negative reward would accumulate.
 
+
+### Conclusion ###
+ We decided finally on using a mix of approach 3,4,and 5. We removed the reward for time steps because it was causing the agent to go in the wrong direction as we intended. We added the extra information to the observation space because we realized later on that it would be really important information for the agent to know this, otherwise it is going to have difficulty decided the next action. 
 
 
 ## Evaluation ##
@@ -124,6 +129,12 @@ But there's something here that's rather interesting. In the graph of 10000 step
 ### Qualitative ###
 
 The agent would, as seen on the graph, initially either die or kill the zombie, but after some time it was getting better at killing the Zombie. It look a very long time for the agent as seen in the first plot to improve, however after it improved then it would stay stable until it was able to explore more. It was a balance of exploration and exploitation to ensure that the agent was doing the right thing. Our goal at the beginning of the project was to have the agent learn to kill the zombie in front of it and it did! 
+
+
+## Conclusion ##
+
+
+This project taught us a lot about the combination of using deep learning with reinforcement learning. We learned that in machine learning there are more issues than just trying to train the model, but providing the agent a safe and optimal environment to thrive. We were glad to get the agent to kill the zombie after a lot of hard work. There are still some areas we could improve on, such as reducing the state space, because as of right now it is very big or even running more episodes allowing the agent to explore more. The next challenge would be to include more zombies and challenge the agent to work hard. 
 
 
 
