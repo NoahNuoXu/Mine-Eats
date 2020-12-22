@@ -11,9 +11,14 @@ title: Final Report
 Our Project is Serious-Sam, based on the game, has a arena of size 8 by 8 and has to kill a zombie within time limits. The goal of the project is to teach the agent, which we named Serious Sam, to kill the Zombie without damaging itself and the evnironment outside. We need to use AI/ML for this project because there are many strategies and features such as the location, angle, and surrounding area that affects the agent's performance, similar to when you are in a fighting club. Therefore, we decided to use deep q learning to achieve our goal for this project.
 
 From the status, we have updated the size of our arena, the reward function, the number of Zombies and state space. For the final submission, we were able to improve upon the agent's performance. Before our agent was lucky a few times, but mainly was losing it's health while never even damaging the Zombie. We learned our mistake was the way we were calculating the observation space. It wasn't trivial to include the arena's wall location into the observation for the agent, because we assumed that the agent didn't need that information in order to kill the Zombie, however, later we learned that it is important because if the agent is facing the wall it cannot kill the Zombie. We also changed the reward function as we were learning that the reward functrion is very important to how the agent's performance is. A different reward function changed our agent's actions and events completely. We also learned that since killing a Zombie takes more than one hit, we needed to have the agent explore as much as it can to eventually kill the Zombie. For the final project, compared to the status project, the goal was to have the agent actually learn how to kill the zombie and keep improving with each step it takes.
-
-![](https://cdn.discordapp.com/attachments/766872422996901921/790786866663522374/4.PNG)
-![](https://cdn.discordapp.com/attachments/766872422996901921/790786875874344970/5.PNG)
+<img src="https://cdn.discordapp.com/attachments/766872422996901921/790786866663522374/4.PNG"
+  alt="Screenshot of Sam fighting Zombies"
+  style="float: left; width:100%;" />
+<img src="https://cdn.discordapp.com/attachments/766872422996901921/790786866663522374/4.PNG"
+  alt="Screenshot of Sam fighting Zombies"
+  style="float: left; width:100%;" />
+<!-- ![](https://cdn.discordapp.com/attachments/766872422996901921/790786866663522374/4.PNG)
+![](https://cdn.discordapp.com/attachments/766872422996901921/790786875874344970/5.PNG) -->
 
 ## Approach ##
 
@@ -51,14 +56,18 @@ Next, we tried to add a small radar system that allows the agent to detect zombi
 
 ## Evaluation ##
 
-
-![](https://media.discordapp.net/attachments/766872422996901921/790778326070329414/average_returns.png)
+<img src="https://cdn.discordapp.com/attachments/766872422996901921/790786866663522374/4.PNG"
+  alt="Zombie Killer graph 10000 Steps"
+  style="float: left; margin-right:100%;" />
+<!-- ![](https://media.discordapp.net/attachments/766872422996901921/790778326070329414/average_returns.png) -->
 Here, we can see a graph of 10000 steps. The agent learns very quickly at first, but seems to fall into a plateau before fixing its behavior. This could be due to the fact that the rewards are limited to only the zombie interaction. If the player dies, they get penalized. If the player hits a zombie, they get rewarded. It's fairly simple to think about, but because all the actions are randomized at first, until the agent starts building a dataset of when it hits the zombie, (which is very unlikely near the beginning) the learning rate is very slow after the initial spurt.
 
 
-
+<img src="https://cdn.discordapp.com/attachments/766872422996901921/790786866663522374/4.PNG"
+  alt="Zombie Killer graph 1600 Steps"
+  style="float: left; margin-right:100%;" />
 If we zoom in, and only do a test of 1600 steps, we can see a beautiful and ideal learning graph
-![](https://cdn.discordapp.com/attachments/766872422996901921/790663342637318144/returns.png)
+<!-- ![](https://cdn.discordapp.com/attachments/766872422996901921/790663342637318144/returns.png) -->
 But there's something here that's rather interesting. In the graph of 10000 steps, the agent was unable to learn fast enough to have results over 0 until the end. However, in the graph of 1600 steps, we seemed to have significantly better end-performance. This is interesting to think about. Is the agent perhaps being given too many steps? Regardless, we were able to finally find a way to make our agent learn how to get scores above 0, and begin actively attacking and killing zombies.
 
 
