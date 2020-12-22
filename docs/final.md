@@ -153,7 +153,7 @@ But there's something here that's rather interesting. In the graph of 10000 step
 <img src="https://cdn.discordapp.com/attachments/766872422996901921/790786875874344970/5.PNG"
      alt="Screenshot of Sam fighting Zombies"
      style="float: left; width:100%;" />
-The agent would, as seen on the graph, initially either die or kill the zombie, but after some time it was getting better at killing the Zombie. It look a very long time for the agent as seen in the first plot to improve, however after it improved then it would stay stable until it was able to explore more. It was a balance of exploration and exploitation to ensure that the agent was doing the right thing. Our goal at the beginning of the project was to have the agent learn to kill the zombie in front of it and it did!
+The agent would, as seen on the graph, initially either die or kill the zombie, but after some time it was getting better at killing the Zombie. It look a very long time for the agent as seen in the first plot to improve, however after it improved then it would stay stable until it was able to explore more. It was a balance of exploration and exploitation to ensure that the agent was doing the right thing. Our goal at the beginning of the project was to have the agent learn to kill the zombie in front of it and it did! In the image above, the white squares represent the disappearing of the zombie because the agent was able to kill it. 
 
 
 ## Conclusion ##
