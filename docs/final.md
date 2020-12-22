@@ -31,7 +31,7 @@ Next, we tried to add a small negative reward for each step the agent was alive,
 
 ## Evaluation ##
 
-
+![](https://media.discordapp.net/attachments/766872422996901921/790778326070329414/average_returns.png)
 
 
 
