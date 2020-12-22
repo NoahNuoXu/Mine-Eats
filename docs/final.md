@@ -56,14 +56,14 @@ Next, we tried to add a small radar system that allows the agent to detect zombi
 
 ## Evaluation ##
 
-<img src="https://cdn.discordapp.com/attachments/766872422996901921/790786866663522374/4.PNG"
+<img src="https://media.discordapp.net/attachments/766872422996901921/790778326070329414/average_returns.png"
   alt="Zombie Killer graph 10000 Steps"
   style="float: left; margin-right:100%;" />
 <!-- ![](https://media.discordapp.net/attachments/766872422996901921/790778326070329414/average_returns.png) -->
 Here, we can see a graph of 10000 steps. The agent learns very quickly at first, but seems to fall into a plateau before fixing its behavior. This could be due to the fact that the rewards are limited to only the zombie interaction. If the player dies, they get penalized. If the player hits a zombie, they get rewarded. It's fairly simple to think about, but because all the actions are randomized at first, until the agent starts building a dataset of when it hits the zombie, (which is very unlikely near the beginning) the learning rate is very slow after the initial spurt.
 
 
-<img src="https://cdn.discordapp.com/attachments/766872422996901921/790786866663522374/4.PNG"
+<img src="https://cdn.discordapp.com/attachments/766872422996901921/790663342637318144/returns.png"
   alt="Zombie Killer graph 1600 Steps"
   style="float: left; margin-right:100%;" />
 If we zoom in, and only do a test of 1600 steps, we can see a beautiful and ideal learning graph
