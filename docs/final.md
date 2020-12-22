@@ -12,6 +12,8 @@ Our Project is Serious-Sam, based on the game, has a arena of size 8 by 8 and ha
 
 From the status, we have updated the size of our arena, the reward function, the number of Zombies and state space. For the final submission, we were able to improve upon the agent's performance. Before our agent was lucky a few times, but mainly was losing it's health while never even damaging the Zombie. We learned our mistake was the way we were calculating the observation space. It wasn't trivial to include the arena's wall location into the observation for the agent, because we assumed that the agent didn't need that information in order to kill the Zombie, however, later we learned that it is important because if the agent is facing the wall it cannot kill the Zombie. We also changed the reward function as we were learning that the reward functrion is very important to how the agent's performance is. A different reward function changed our agent's actions and events completely. We also learned that since killing a Zombie takes more than one hit, we needed to have the agent explore as much as it can to eventually kill the Zombie. For the final project, compared to the status project, the goal was to have the agent actually learn how to kill the zombie and keep improving with each step it takes. 
 
+![](https://cdn.discordapp.com/attachments/766872422996901921/790786866663522374/4.PNG)
+![](https://cdn.discordapp.com/attachments/766872422996901921/790786875874344970/5.PNG)
 
 ## Approach ##
 
