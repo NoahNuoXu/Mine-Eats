@@ -14,9 +14,6 @@ From the status, we have updated the size of our arena, the reward function, the
 <img src="https://cdn.discordapp.com/attachments/766872422996901921/790786866663522374/4.PNG"
   alt="Screenshot of Sam fighting Zombies"
   style="float: left; width:100%;" />
-<img src="https://cdn.discordapp.com/attachments/766872422996901921/790786866663522374/4.PNG"
-  alt="Screenshot of Sam fighting Zombies"
-  style="float: left; width:100%;" />
 <!-- ![](https://cdn.discordapp.com/attachments/766872422996901921/790786866663522374/4.PNG)
 ![](https://cdn.discordapp.com/attachments/766872422996901921/790786875874344970/5.PNG) -->
 
@@ -56,6 +53,8 @@ Next, we tried to add a small radar system that allows the agent to detect zombi
 
 ## Evaluation ##
 
+
+### Quantitative ###
 <img src="https://media.discordapp.net/attachments/766872422996901921/790778326070329414/average_returns.png"
   alt="Zombie Killer graph 10000 Steps"
   style="float: left; margin-right:100%;" />
@@ -70,6 +69,13 @@ If we zoom in, and only do a test of 1600 steps, we can see a beautiful and idea
 <!-- ![](https://cdn.discordapp.com/attachments/766872422996901921/790663342637318144/returns.png) -->
 But there's something here that's rather interesting. In the graph of 10000 steps, the agent was unable to learn fast enough to have results over 0 until the end. However, in the graph of 1600 steps, we seemed to have significantly better end-performance. This is interesting to think about. Is the agent perhaps being given too many steps? Regardless, we were able to finally find a way to make our agent learn how to get scores above 0, and begin actively attacking and killing zombies.
 
+
+### Qualitative ###
+<img src="https://cdn.discordapp.com/attachments/766872422996901921/790786875874344970/5.PNG"
+  alt="Screenshot of Sam fighting Zombies"
+  style="float: left; width:100%;" />
+
+In this screenshot, you can see a picture of Sam having killed a zombie. This is perfect. Our agent wasn't able to even properly attack zombies before, but now he's able to fight until he kills the zombies. In this particular screenshot, you can see the issue of the agent breaking the walls, but in future episodes, this goes away. We believe this was a great success, as being able to kill a zombie is exactly what we want from our agent.
 
 
 ## References ##
